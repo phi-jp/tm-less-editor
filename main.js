@@ -22,7 +22,8 @@ tm.main(function() {
     lessEditor.setTheme("ace/theme/chrome");
     lessEditor.getSession().setMode("ace/mode/less");
     lessEditor.session.$tabSize = 2;
-    //lessEditor.addEventListener("change", parse);
+    lessEditor.addEventListener("change", parse);
+    /*
     lessEditor.commands.addCommand({
         Name: "parse",
         bindKey: {
@@ -32,6 +33,7 @@ tm.main(function() {
             parse();
         }
     });
+    */
     
     // 結果用エディタ
     cssEditor = ace.edit("result");
